@@ -45,7 +45,7 @@ def main():
                 if shot.collides_with(ob):
                     log_event("asteroid_shot")
                     shot.kill()
-                    ob.kill()
+                    ob.split()
         pygame.display.flip()
         dt = clock.tick(60) / 1000
     print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
